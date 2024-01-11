@@ -5,15 +5,17 @@ import global from '../assets/globe1.png';
 
 const Header = () => {
   return (
-    <div className='bg-[#EDEDED]  mx-auto text-primary  '>
-      {/* ************ */}
-      {/* left side */}
-      {/* logo menu item */}
-      {/* ************ */}
-      <div className='  mx-auto '>
+    <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6]  mx-auto text-primary  '>
+
+      <div className='  '>
         <div className='flex justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
-          <div className='flex gap-16'>
-            <img className='w-[177px] h-[28px]' src={logo} alt="" />
+          {/* ************ */}
+          {/* left side */}
+          {/* logo menu item */}
+          {/* ************ */}
+
+          <div className='flex  gap-16 place-items-center'>
+            <img className='w-[143px] h-[48px]' src={logo} alt="" />
             <div>
               <ul className='flex gap-7'>
                 <li className='text-[#393939] font-medium leading-normal'>Trade</li>
@@ -28,7 +30,7 @@ const Header = () => {
           {/* right side */}
           {/* icon, button icon */}
           {/* ************ */}
-          <div className='flex gap-10 font-semibold'>
+          <div className='flex gap-10 place-items-center font-semibold'>
             <div className='flex  place-items-center gap-1.5'>
               <img className='' src={coin} alt="" />
               <p className='text-[##393939] '>$54343</p>
@@ -58,6 +60,9 @@ const Header = () => {
               <img src={global} alt="" />
             </div>
           </div>
+
+
+
         </div>
       </div>
     </div>

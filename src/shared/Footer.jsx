@@ -9,15 +9,17 @@ import linkedin from '../assets/socialicon/linkedin_icon.png';
 
 const Footer = () => {
   return (
-    <div className=' bg-[#B6B6B6] mt-[18px]'>
-      <div className='mx-auto flex justify-center pt-8 pb-6'>
+    <div className=' bg-[#B6B6B6] mt-[18px] '>
+      <div className='mx-auto flex justify-center px-4 pt-8 pb-6'>
 
         <div>
           <h2 className='text-primary text-2xl mb-[23px] text-center font-medium'>Join Our Community</h2>
-          <div className='flex gap-[13px]'>
+          <div className=' flex flex-wrap gap-[13px]'>
+
             <img className='w-[50px] h-[50px] bg-[#C7EAFF] rounded-[10px] p-2' src={facebook} alt="" />
             <img className='w-[50px] h-[50px] bg-[#C7EAFF] rounded-[10px] p-2' src={x} alt="" />
             <img className='w-[50px] h-[50px] bg-[#FFC3AD] rounded-[10px] p-2' src={reddit} alt="" />
+
             <img className='w-[50px] h-[50px] bg-[#AFE8FF] rounded-[10px] p-2' src={telegram} alt="" />
             <img className='w-[50px] h-[50px] bg-gradient-to-r from-[#FDD1FB] via-[#FFD6FC ] to-[#FAC8C9] rounded-[10px] p-2' src={instagram} alt="" />
             <img className='w-[50px] h-[50px] bg-[#D7F1FD]  rounded-[10px] p-2' src={linkedin} alt="" />
@@ -32,7 +34,7 @@ const Footer = () => {
             </ul>
           </div> */}
       </div>
-      <div className='bg-[#A5A5A5] font-medium border-t-[#515151] text-[#525252] py-6'>
+      <div className='bg-[#A5A5A5] font-medium border-t-[1px] border-t-[#515151] text-[#525252] py-6'>
         <p className='text-center text-sm'>All Right Resarved Mindchain 2024</p>
       </div>
     </div>
