@@ -7,7 +7,6 @@ import msud from '../assets/msud.png';
 import refresh from '../assets/refresh1.png';
 import Footer from "../shared/Footer";
 import { useState } from "react";
-import Navbar from "../shared/navbar";
 
 const Home = () => {
 
@@ -47,7 +46,7 @@ const Home = () => {
             </div>
             <input className="mt-5 border-[1px] font-medium w-full lg:w-[477px] h-12 lg:h-[55px] border-secondary rounded-2xl    outline-secondary   placeholder:text-[#717171]   py-4 px-3   focus:outline-none  " placeholder="0.00" type="text" />
 
-            <img className="w-10 h-10 mt-4 mb-7 rounded-full mx-auto bg-white" src={downarrow} alt="" />
+            <img className="w-10 h-10 mt-4 mb-7 cursor-pointer rounded-full mx-auto bg-white" src={downarrow} alt="" />
 
             {/*  */}
             <div className="flex place-items-center gap-1 lg:mx-8">
@@ -61,7 +60,7 @@ const Home = () => {
                 <option className=" text-primary opacity-50" value="AUD">AUD</option>
               </select>
               {/* copy icon */}
-              <div>
+              <div className="cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                   <g clipPath="url(#clip0_1167_27)">
                     <path d="M18.7499 5.29792L13.452 0H5.20825C4.37945 0 3.58459 0.32924 2.99854 0.915291C2.41249 1.50134 2.08325 2.2962 2.08325 3.125V20.8333H18.7499V5.29792ZM4.16658 18.75V3.125C4.16658 2.84873 4.27633 2.58378 4.47168 2.38843C4.66703 2.19308 4.93198 2.08333 5.20825 2.08333H12.4999V6.25H16.6666V18.75H4.16658ZM22.9166 9.375V25H7.29158V22.9167H20.8332V7.29167L22.9166 9.375Z" fill="#343434" />
@@ -94,7 +93,7 @@ const Home = () => {
               <img className="w-[30px] h-[30px]" src={msud} alt="" />
               <img className="w-[30px] h-[30px]" src={coin} alt="" />
               <p className=" text-[#343434]">MSUD/PMIND</p>
-              <div>
+              <div className="cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                   <g clipPath="url(#clip0_1176_54)">
                     <path d="M28.75 20H3.35121L3.36871 19.9813L6.17371 17.125C6.29645 17.0097 6.39462 16.8708 6.46233 16.7166C6.53004 16.5624 6.5659 16.3961 6.56775 16.2277C6.5696 16.0593 6.53741 15.8923 6.47311 15.7367C6.4088 15.581 6.31371 15.44 6.19354 15.322C6.07337 15.204 5.93061 15.1116 5.77381 15.0501C5.61701 14.9887 5.44942 14.9596 5.28109 14.9645C5.11276 14.9695 4.94716 15.0084 4.79425 15.0789C4.64133 15.1495 4.50424 15.2502 4.39121 15.375L1.59246 18.2213C1.38871 18.425 1.10371 18.7375 0.812462 19.0663C0.289439 19.6577 0.000732422 20.4199 0.000732422 21.2094C0.000732422 21.9989 0.289439 22.7611 0.812462 23.3525C1.10371 23.68 1.38871 23.9925 1.58496 24.19L4.39121 27.045C4.62646 27.266 4.93808 27.3875 5.26084 27.3839C5.5836 27.3804 5.89248 27.2521 6.12281 27.026C6.35314 26.7998 6.48707 26.4934 6.49656 26.1707C6.50604 25.8481 6.39036 25.5343 6.17371 25.295L3.42996 22.5H28.75C29.0815 22.5 29.3994 22.3683 29.6339 22.1339C29.8683 21.8995 30 21.5815 30 21.25C30 20.9185 29.8683 20.6005 29.6339 20.3661C29.3994 20.1317 29.0815 20 28.75 20Z" fill="#343434" />

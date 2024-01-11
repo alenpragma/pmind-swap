@@ -7,10 +7,10 @@ import { useState } from 'react';
 const Header = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6]  mx-auto text-primary  '>
+    <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6] z-20  mx-auto text-primary  '>
 
       <div className='  relative'>
-        <div className={`absolute bg-[#EDEDED] w-full mt-20 z-10  ${show == true ? "-mt-80" : ""}`}>
+        <div className={`absolute bg-[#EDEDED] w-full mt-20 z-10 transition-all duration-300 ease-in  ${show == true ? "-mt-80" : ""}`}>
           <ul className='flex flex-col ps-6 gap-7'>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Liquidity</li>
@@ -22,14 +22,14 @@ const Header = () => {
             </div>
           </ul>
         </div>
-        <div className='flex justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
+        <div className='flex z-50 justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
           {/* ************ */}
           {/* left side */}
           {/* logo menu item */}
           {/* ************ */}
 
           <div className='flex  gap-16 place-items-center'>
-            <img className='w-[143px] h-[48px]' src={logo} alt="" />
+            <img className='w-[143px] h-[48px] z-100' src={logo} alt="" />
             <div className='hidden lg:block'>
               <ul className='flex gap-7'>
                 <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
@@ -78,7 +78,7 @@ const Header = () => {
                 <img src={global} alt="" />
               </div>
 
-              <div onClick={() => setShow(!show)} className='lg:hidden px-1 cursor-pointer'>
+              <div onClick={() => setShow(!show)} className='lg:hidden px-1 z-100 cursor-pointer'>
                 <span>X</span>
               </div>
             </div>
