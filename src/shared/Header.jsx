@@ -5,9 +5,13 @@ import global from '../assets/globe1.png';
 
 const Header = () => {
   return (
-    <div className='bg-[#EDEDED] w-[1140px] mx-auto text-primary  '>
+    <div className='bg-[#EDEDED]  mx-auto text-primary  '>
+      {/* ************ */}
+      {/* left side */}
+      {/* logo menu item */}
+      {/* ************ */}
       <div className='  mx-auto '>
-        <div className='flex justify-items-end h-20 justify-between place-items-center px-6 border mx-auto'>
+        <div className='flex justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
           <div className='flex gap-16'>
             <img className='w-[177px] h-[28px]' src={logo} alt="" />
             <div>
@@ -19,7 +23,11 @@ const Header = () => {
               </ul>
             </div>
           </div>
-          {/*  */}
+
+          {/* ************ */}
+          {/* right side */}
+          {/* icon, button icon */}
+          {/* ************ */}
           <div className='flex gap-10 font-semibold'>
             <div className='flex  place-items-center gap-1.5'>
               <img className='' src={coin} alt="" />
