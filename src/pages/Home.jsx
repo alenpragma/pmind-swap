@@ -7,6 +7,7 @@ import msud from '../assets/msud.png';
 import refresh from '../assets/refresh1.png';
 import Footer from "../shared/Footer";
 import { useState } from "react";
+import Navbar from "../shared/navbar";
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-
+      {/* <Navbar /> */}
       <div className="flex flex-col max-w-[1140px] lg:flex-row gap-5 mt-[18px] mx-auto justify-center">
         {/* ************ */}
         {/* 1st  card*/}

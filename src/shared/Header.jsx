@@ -1,13 +1,27 @@
 import logo from '../assets/logo.png';
 import coin from '../assets/mind1.png';
 import global from '../assets/globe1.png';
+import { useState } from 'react';
 
 
 const Header = () => {
+  const [show, setShow] = useState(false);
   return (
     <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6]  mx-auto text-primary  '>
 
-      <div className='  '>
+      <div className='  relative'>
+        <div className={`absolute bg-[#EDEDED] w-full mt-20 z-10  ${show == true ? "-mt-80" : ""}`}>
+          <ul className='flex flex-col ps-6 gap-7'>
+            <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
+            <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Liquidity</li>
+            <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Limit</li>
+            <li className='text-[#393939] font-medium cursor-pointer leading-normal'>More</li>
+            <div className='flex pb-4 place-items-center gap-1.5'>
+              <img className='' src={coin} alt="" />
+              <p className='text-[##393939] '>$54343</p>
+            </div>
+          </ul>
+        </div>
         <div className='flex justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
           {/* ************ */}
           {/* left side */}
@@ -18,10 +32,10 @@ const Header = () => {
             <img className='w-[143px] h-[48px]' src={logo} alt="" />
             <div className='hidden lg:block'>
               <ul className='flex gap-7'>
-                <li className='text-[#393939] font-medium leading-normal'>Trade</li>
-                <li className='text-[#393939] font-medium leading-normal'>Liquidity</li>
-                <li className='text-[#393939] font-medium leading-normal'>Limit</li>
-                <li className='text-[#393939] font-medium leading-normal'>More</li>
+                <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
+                <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Liquidity</li>
+                <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Limit</li>
+                <li className='text-[#393939] font-medium cursor-pointer leading-normal'>More</li>
               </ul>
             </div>
           </div>
@@ -31,9 +45,12 @@ const Header = () => {
           {/* icon, button icon */}
           {/* ************ */}
           <div className='flex gap-10 place-items-center font-semibold'>
-            <div className='flex  place-items-center gap-1.5'>
-              <img className='' src={coin} alt="" />
-              <p className='text-[##393939] '>$54343</p>
+            <div className='hidden lg:block'>
+
+              <div className='flex  place-items-center gap-1.5'>
+                <img className='' src={coin} alt="" />
+                <p className='text-[##393939] '>$54343</p>
+              </div>
             </div>
 
             <div className='flex gap-5 place-items-center justify-center'>
@@ -57,7 +74,13 @@ const Header = () => {
                 <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#272727" fontSize="18">Connect Wallet</text>
               </svg>
 
-              <img src={global} alt="" />
+              <div className='hidden lg:block'>
+                <img src={global} alt="" />
+              </div>
+
+              <div onClick={() => setShow(!show)} className='lg:hidden px-1 cursor-pointer'>
+                <span>X</span>
+              </div>
             </div>
           </div>
 
