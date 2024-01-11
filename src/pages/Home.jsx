@@ -13,6 +13,10 @@ const Home = () => {
 
   const [active, setActive] = useState('3');
   console.log(active);
+
+
+
+
   return (
     <div>
       <Header />
@@ -32,7 +36,7 @@ const Home = () => {
 
             <div className="lg:mx-8 flex place-items-center gap-1 mt-12 ">
               <img className="" src={pmlogo} alt="" />
-              <select className=" border-none outline-none  bg-[#EDEDED] text-primary" name="" id="">
+              <select className="custom-select border-none outline-none  bg-[#EDEDED] text-primary" name="" id="">
                 <option className=" text-primary opacity-50" value="PMIND">PMIND</option>
                 <option className=" text-primary opacity-50" value="USD">USD</option>
                 <option className=" text-primary opacity-50" value="EUR">EUR</option>
@@ -48,7 +52,7 @@ const Home = () => {
             {/*  */}
             <div className="flex place-items-center gap-1 lg:mx-8">
               <img src={msud} alt="" />
-              <select className="border-none outline-none  bg-[#EDEDED]  text-primary" name="" id="">
+              <select className=" custom-select border-none outline-none  bg-[#EDEDED]  text-primary" name="" id="">
                 <option className=" text-primary opacity-50" value="BNB">MUSD</option>
                 <option className=" text-primary opacity-50" value="USD">USD</option>
                 <option className=" text-primary opacity-50" value="EUR">EUR</option>
@@ -56,7 +60,20 @@ const Home = () => {
                 <option className=" text-primary opacity-50" value="JPY">JPY</option>
                 <option className=" text-primary opacity-50" value="AUD">AUD</option>
               </select>
-              <img className="w-6 h-6 ms-5" src={copy} alt="" />
+              {/* copy icon */}
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <g clipPath="url(#clip0_1167_27)">
+                    <path d="M18.7499 5.29792L13.452 0H5.20825C4.37945 0 3.58459 0.32924 2.99854 0.915291C2.41249 1.50134 2.08325 2.2962 2.08325 3.125V20.8333H18.7499V5.29792ZM4.16658 18.75V3.125C4.16658 2.84873 4.27633 2.58378 4.47168 2.38843C4.66703 2.19308 4.93198 2.08333 5.20825 2.08333H12.4999V6.25H16.6666V18.75H4.16658ZM22.9166 9.375V25H7.29158V22.9167H20.8332V7.29167L22.9166 9.375Z" fill="#343434" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1167_27">
+                      <rect width="25" height="25" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              {/* <img className="w-6 h-6 ms-5" src={copy} alt="" /> */}
             </div>
             <input className="mt-5 border-[1px] font-medium w-full lg:w-[477px] h-12 lg:h-[55px] border-secondary rounded-2xl focus:border-secondary outline-secondary placeholder:text-[#717171]   py-4 px-3   focus:outline-none " placeholder="0.0" type="text" />
 
