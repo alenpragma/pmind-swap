@@ -20,11 +20,11 @@ const Home = () => {
     <div>
       <Header />
       {/* <Navbar /> */}
-      <div className="flex flex-col max-w-[1140px] lg:flex-row gap-5 mt-[18px] mx-auto justify-center">
+      <div className="flex  flex-col max-w-[1140px] lg:flex-row gap-5 mt-[18px] mx-auto justify-center">
         {/* ************ */}
         {/* 1st  card*/}
         {/* ************ */}
-        <div className="relative w-[370px] md:w-[400px] lg:w-[560px] lg:h-[662px] py-6 lg:py-7 mx-auto px-3 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
+        <div className="-z-30 relative w-[370px] md:w-[400px] lg:w-[560px] lg:h-[662px] py-6 lg:py-7 mx-auto px-3 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
           <div className="absolute right-3 lg:right-6 top-3 lg:top-6">
             <img className="w-6 h-6" src={refresh} alt="" />
           </div>
@@ -158,7 +158,7 @@ const Home = () => {
               {/* ************ */}
 
               <div className="ms-auto my-1 ">
-                <div className="w-[228px] flex gap-6 px-[7px] py-[6px] rounded-lg place-items-center  justify-center bg-white   p-1.2">
+                <div className="w-[228px] flex gap-6 px-[12px] py-[6px] rounded-lg place-items-center  justify-center bg-white   p-1.2">
                   <p onClick={() => setActive(1)} className={`cursor-pointer ${active == 1 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>24H</p>
                   <p onClick={() => setActive(2)} className={`cursor-pointer ${active == 2 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>1W</p>
                   <p onClick={() => setActive(3)} className={`cursor-pointer ${active == 3 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>1M</p>
@@ -172,9 +172,9 @@ const Home = () => {
             {/* Chart */}
             {/* ************ */}
 
-            <div className="h-[400px] lg:h-[447px] mt-5 mb-11 w-full bg-white rounded-2xl flex place-items-end">
+            <div className="h-[390px] lg:h-[447px] mt-12 lg:mt-6  min-w-[100%]  w-full bg-white rounded-2xl flex  place-items-end">
               {/* <img src={chart} alt="" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="496" height="301" viewBox="0 0 496 301" fill="none">
+              <svg className="ms-auto" xmlns="http://www.w3.org/2000/svg" width="496" height="301" viewBox="0 0 496 301" fill="none">
                 <path d="M483.574 24.4395C487.196 16.5952 491.116 10.2115 495.5 6.18582V300.5H0.5V263.308C0.776547 263.721 1.13548 264.035 1.60719 264.08C2.18219 264.135 2.67135 263.764 3.05885 263.316C3.46435 262.847 3.87124 262.166 4.28318 261.317C5.92822 257.927 7.88651 251.37 10.1144 242.869C12.0039 235.658 14.0969 227.011 16.3654 217.637C16.7768 215.937 17.1941 214.213 17.617 212.47C20.3718 201.11 23.3659 188.913 26.5562 177.04C32.9442 153.266 40.0989 130.87 47.6607 119.07C49.5479 116.125 51.4414 113.872 53.3293 112.422C55.212 110.976 57.0562 110.353 58.8766 110.593C60.7043 110.833 62.6097 111.956 64.5815 114.216C66.5534 116.477 68.5587 119.838 70.5835 124.47C76.7176 138.504 81.2926 150.832 84.9341 160.645C86.0814 163.736 87.1361 166.578 88.1176 169.145C90.1613 174.49 91.8976 178.668 93.4978 181.405C94.2962 182.77 95.0842 183.819 95.8914 184.472C96.7129 185.137 97.6018 185.426 98.5352 185.151C99.4268 184.889 100.246 184.142 101.034 183.026C101.83 181.899 102.641 180.327 103.493 178.299C105.198 174.241 107.101 168.271 109.379 160.17C112.599 148.714 116.58 132.948 121.815 112.215C123.985 103.623 126.37 94.1777 129.005 83.8324C134.82 61.0066 140.423 39.3634 146.636 23.8228C149.743 16.0491 152.986 9.84698 156.455 5.79264C159.921 1.74202 163.535 -0.0824133 167.421 0.664155C171.362 1.42114 175.761 4.84542 180.698 11.7676C185.623 18.6716 191.022 28.9675 196.995 43.2957C208.939 71.9484 223.14 116.637 240.412 182.342L240.779 183.736L241.354 182.414C273.98 107.472 301.328 51.5488 324.162 24.2403C329.866 17.4184 335.267 12.4096 340.374 9.33506C345.477 6.26335 350.255 5.13956 354.747 6.02613C359.241 6.91331 363.538 9.83125 367.639 15.0248C371.741 20.2204 375.621 27.6627 379.281 37.5276C388.892 63.4317 397.321 82.8746 404.792 96.9993C412.256 111.112 418.787 119.962 424.618 124.631C427.54 126.971 430.31 128.28 432.954 128.656C435.607 129.032 438.092 128.463 440.42 127.118C445.042 124.448 449.06 118.716 452.729 111.221C458.322 99.7954 463.218 84.0196 468.186 68.0139C469.743 62.9972 471.307 57.958 472.901 53.023C476.248 42.666 479.732 32.7595 483.574 24.4395Z" fill="url(#paint0_linear_1167_38)" stroke="url(#paint1_linear_1167_38)" />
                 <defs>
                   <linearGradient id="paint0_linear_1167_38" x1="248" y1="-132.134" x2="248" y2="441.515" gradientUnits="userSpaceOnUse">

@@ -6,30 +6,32 @@ import { useState } from 'react';
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  return (
-    <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6] z-20  mx-auto text-primary  '>
+  console.log(show);
 
-      <div className='  relative'>
-        <div className={`absolute bg-[#EDEDED] w-full mt-20 z-10 transition-all duration-300 ease-in  ${show == true ? "-mt-80" : ""}`}>
+  return (
+    <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6]   mx-auto text-primary  '>
+
+      <div className='relative'>
+        <div className={`absolute bg-[#EDEDED] lg:hidden w-full -z-10  transition-all duration-300 ease-in-out pt-3 ${show == false ? "-mt-56" : "mt-20"}`}>
           <ul className='flex flex-col ps-6 gap-7'>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Liquidity</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Limit</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>More</li>
-            <div className='flex pb-4 place-items-center gap-1.5'>
+            <div className='flex font-semibold pb-4 place-items-center gap-1.5'>
               <img className='' src={coin} alt="" />
-              <p className='text-[##393939] '>$54343</p>
+              <p className='text-[##393939]'>$54343</p>
             </div>
           </ul>
         </div>
-        <div className='flex z-50 justify-items-end h-20 justify-between place-items-center px-6   mx-auto'>
+        <div className='flex justify-items-end h-20 justify-between place-items-center px-3 lg:px-6 mx-auto'>
           {/* ************ */}
           {/* left side */}
           {/* logo menu item */}
           {/* ************ */}
 
-          <div className='flex  gap-16 place-items-center'>
-            <img className='w-[143px] h-[48px] z-100' src={logo} alt="" />
+          <div className='flex  gap-24 place-items-center'>
+            <img className='w-[143px] h-[48px]  cursor-pointer' src={logo} alt="" />
             <div className='hidden lg:block'>
               <ul className='flex gap-7'>
                 <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
@@ -53,9 +55,9 @@ const Header = () => {
               </div>
             </div>
 
-            <div className='flex gap-5 place-items-center justify-center'>
+            <div className='flex gap-3  lg:gap-5 place-items-center justify-center'>
 
-              <svg className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="215" height="48" viewBox="0 0 215 48" fill="none">
+              <svg className='cursor-pointer w-[170px] lg:w-[215px]' height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 48" fill="none">
                 {/* <!-- White Background --> */}
                 <rect width="100%" height="100%" fill="white" rx="24" ry="24" />
 
@@ -78,14 +80,11 @@ const Header = () => {
                 <img src={global} alt="" />
               </div>
 
-              <div onClick={() => setShow(!show)} className='lg:hidden px-1 z-100 cursor-pointer'>
+              <div onClick={() => setShow(!show)} className='lg:hidden px-1  cursor-pointer'>
                 <span>X</span>
               </div>
             </div>
           </div>
-
-
-
         </div>
       </div>
     </div>
