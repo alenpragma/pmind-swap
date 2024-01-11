@@ -20,16 +20,14 @@ const Footer = () => {
             <img className='w-[50px] h-[50px] bg-[#FFC3AD] rounded-[10px] p-2' src={reddit} alt="" />
             <img className='w-[50px] h-[50px] bg-[#AFE8FF] rounded-[10px] p-2' src={telegram} alt="" />
             <img className='w-[50px] h-[50px] bg-gradient-to-r from-[#FDD1FB] via-[#FFD6FC ] to-[#FAC8C9] rounded-[10px] p-2' src={instagram} alt="" />
-            <img className='w-[50px] h-[50px]   rounded-[10px] p-2' src={linkedin} alt="" />
-
-
+            <img className='w-[50px] h-[50px] bg-[#D7F1FD]  rounded-[10px] p-2' src={linkedin} alt="" />
           </div>
         </div>
 
 
         <div className='mt-3 mb-11'>
           <h2 className='text-primary  text-lg font-medium pb-0.5'>About Mindchain</h2>
-          <ul className='text-[#707070] text-[16xpx] font-medium'>
+          <ul className='text-[#707070] text-[16px] font-medium'>
             <li className='pb-[5px]'>Contact</li>
             <li className='pb-[5px]'>About</li>
             <li className='pb-[5px]'>Blog</li>
