@@ -11,13 +11,13 @@ import { useState } from "react";
 
 const Home = () => {
 
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('3');
   console.log(active);
   return (
     <div>
       <Header />
 
-      <div className="flex flex-col w-[1140px] lg:flex-row gap-5 mt-[18px] mx-auto justify-center">
+      <div className="flex flex-col max-w-[1140px] lg:flex-row gap-5 mt-[18px] mx-auto justify-center">
         {/* ************ */}
         {/* 1st  card*/}
         {/* ************ */}
@@ -143,10 +143,10 @@ const Home = () => {
 
               <div className="ms-auto my-1 ">
                 <div className="w-[228px] flex gap-6 px-[7px] py-[6px] rounded-lg place-items-center  justify-center bg-white   p-1.2">
-                  <p onClick={() => setActive(1)} className="text-white w-16 h-9 flex place-items-center justify-center bg-secondary rounded-[10px]">24H</p>
-                  <p onClick={() => setActive(2)} className="text-secondary ">1W</p>
-                  <p onClick={() => setActive(3)} className="text-secondary ">1M</p>
-                  <p onClick={() => setActive(4)} className="text-secondary ">1Y</p>
+                  <p onClick={() => setActive(1)} className={`cursor-pointer ${active == 1 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>24H</p>
+                  <p onClick={() => setActive(2)} className={`cursor-pointer ${active == 2 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>1W</p>
+                  <p onClick={() => setActive(3)} className={`cursor-pointer ${active == 3 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>1M</p>
+                  <p onClick={() => setActive(4)} className={`cursor-pointer ${active == 4 ? "w-16 h-9 flex place-items-center justify-center bg-secondary text-white rounded-[10px] " : "text-secondary "}`}>1Y</p>
                 </div>
 
               </div>

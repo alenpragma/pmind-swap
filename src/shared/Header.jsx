@@ -16,7 +16,7 @@ const Header = () => {
 
           <div className='flex  gap-16 place-items-center'>
             <img className='w-[143px] h-[48px]' src={logo} alt="" />
-            <div>
+            <div className='hidden lg:block'>
               <ul className='flex gap-7'>
                 <li className='text-[#393939] font-medium leading-normal'>Trade</li>
                 <li className='text-[#393939] font-medium leading-normal'>Liquidity</li>
