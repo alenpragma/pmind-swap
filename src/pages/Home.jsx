@@ -4,7 +4,6 @@ import downarrow from '../assets/socialicon/arrow-down.png';
 import coin from '../assets/pmlogo.png';
 import pmlogo from '../assets/pmlogo.png';
 import msud from '../assets/msud.png';
-import copy from '../assets/copy-alt.png';
 import refresh from '../assets/refresh1.png';
 import Footer from "../shared/Footer";
 import { useState } from "react";
@@ -25,8 +24,8 @@ const Home = () => {
         {/* ************ */}
         {/* 1st  card*/}
         {/* ************ */}
-        <div className="relative w-[400px] lg:w-[560px] lg:h-[662px] py-6 lg:py-7 mx-auto px-3 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
-          <div className="absolute right-6 top-6">
+        <div className="relative w-[370px] md:w-[400px] lg:w-[560px] lg:h-[662px] py-6 lg:py-7 mx-auto px-3 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
+          <div className="absolute right-3 lg:right-6 top-3 lg:top-6">
             <img className="w-6 h-6" src={refresh} alt="" />
           </div>
           <div className="font-semibold text-center">
@@ -87,7 +86,7 @@ const Home = () => {
 
         {/* 2nd  card*/}
 
-        <div className=" w-[400px] lg:w-[560px] mx-auto h-[662px] px-4 py-7 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
+        <div className="w-[370px] md:w-[400px] lg:w-[560px] mx-auto h-[662px] px-4 py-7 border-[1px] bg-[#EDEDED] border-[#B6B6B6] rounded-2xl">
           <div className="font-semibold text-center">
             {/* swap */}
             <div className="font-semibold flex gap-3 place-items-center">
