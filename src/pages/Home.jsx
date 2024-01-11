@@ -1,6 +1,7 @@
 import Header from "../shared/Header";
 import downarrow from '../assets/socialicon/arrow-down.png';
 // import chart from '../assets/socialicon/';
+import coin from '../assets/pmlogo.png';
 import pmlogo from '../assets/pmlogo.png';
 import msud from '../assets/msud.png';
 import copy from '../assets/copy-alt.png';
@@ -174,7 +175,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
