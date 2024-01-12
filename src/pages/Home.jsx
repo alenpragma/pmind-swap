@@ -8,6 +8,8 @@ import refresh from '../assets/refresh1.png';
 import Footer from "../shared/Footer";
 import { useState } from "react";
 
+import Accordion from "../compenents/Accordion";
+
 const Home = () => {
 
   const [active, setActive] = useState('3');
@@ -203,6 +205,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+      {/* <Accordion /> */}
     </div>
   );
 };
