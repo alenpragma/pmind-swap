@@ -6,31 +6,30 @@ import { useState } from 'react';
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  console.log(show);
 
   return (
     <div className='bg-[#EDEDED] border-b-[1px] border-[#B6B6B6]   mx-auto text-primary  '>
 
       <div className='relative'>
-        <div className={`absolute bg-[#EDEDED] lg:hidden w-full -z-10  transition-all duration-300 ease-in-out pt-3 ${show == false ? "-mt-56" : "mt-20"}`}>
+        <div className={`absolute bg-[#EDEDED] lg:hidden w-full z-10  transition-all duration-300 ease-in-out pt-3 ${show == false ? "-mt-64 -z-50" : "mt-20"}`}>
           <ul className='flex flex-col ps-6 gap-7'>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Trade</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Liquidity</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>Limit</li>
             <li className='text-[#393939] font-medium cursor-pointer leading-normal'>More</li>
             <div className='flex font-semibold pb-4 place-items-center gap-1.5'>
-              <img className='' src={coin} alt="" />
+              <img className='bg-[#EDEDED]' src={coin} alt="" />
               <p className='text-[##393939]'>$54343</p>
             </div>
           </ul>
         </div>
-        <div className='flex justify-items-end h-20 justify-between place-items-center px-3 lg:px-6 mx-auto'>
+        <div className='flex justify-items-end z-20 bg-[#EDEDED]  h-20 justify-between place-items-center px-3 lg:px-6 mx-auto'>
           {/* ************ */}
           {/* left side */}
           {/* logo menu item */}
           {/* ************ */}
 
-          <div className='flex  gap-24 place-items-center'>
+          <div className='flex z-50 bg-[#EDEDED] gap-24 place-items-center'>
             <img className='w-[143px] h-[48px]  cursor-pointer' src={logo} alt="" />
             <div className='hidden lg:block'>
               <ul className='flex gap-7'>
@@ -55,7 +54,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className='flex gap-3  lg:gap-5 place-items-center justify-center'>
+            <div className='flex gap-3 z-50 lg:gap-5 place-items-center justify-center'>
 
               <svg className='cursor-pointer w-[170px] lg:w-[215px]' height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 48" fill="none">
                 {/* <!-- White Background --> */}
