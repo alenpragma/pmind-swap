@@ -50,7 +50,7 @@ const Swap = () => {
                 <option className=" text-primary opacity-50" value="AUD">AUD</option>
               </select>
             </div>
-            <input className="mt-5 border-[1px] font-medium w-full lg:w-[477px] h-12 lg:h-[55px] border-secondary rounded-2xl    outline-secondary block  placeholder:text-[#717171]   py-4 px-3   focus:outline-none  " placeholder="0.00" type="text" />
+            <input className="mt-5 border-[1px] font-medium w-full lg:w-[477px] h-12 lg:h-[55px] border-secondary rounded-2xl focus:border-secondary outline-secondary placeholder:text-[#717171]   py-4 px-3 focus:outline-none" placeholder="0.00" type="text" />
 
             <img className="w-10 h-10 mt-4 mb-7 cursor-pointer rounded-full mx-auto bg-white" src={downarrow} alt="" />
 
