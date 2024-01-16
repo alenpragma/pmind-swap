@@ -11,7 +11,7 @@ const Mind = () => {
       .then((data) => setBlocks(data));
   }, []);
 
-  console.log(blocks);
+  // console.log(blocks);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,11 +40,11 @@ const Mind = () => {
   });
   console.log(transactions);
   let time = 0;
-  transactions.items.map((item) => {
-    time += +item.confirmation_duration[1];
+  transactions?.items?.map((item) => {
+    time += +item?.confirmation_duration[1];
 
   });
-  const durationInMilliseconds = time / transactions.items.length;
+  const durationInMilliseconds = time / transactions?.items?.length;
   const durationInSeconds = durationInMilliseconds / 1000;
 
   console.log("Duration in seconds:", durationInSeconds);
@@ -54,21 +54,19 @@ const Mind = () => {
 
 
       <div className=" flex flex-auto flex-col items-center lg:flex-row justify-between gap-4">
-        <div className="border-[1px] w-[360px] px-4 md:w-[350px] bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
+        <div className="border-[1px] w-[370px] px-4 md:w-[350px]   bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
           <p>Total blocks</p>
           <p className="font-semibold">{totalBlock.toLocaleString()}</p>
         </div>
-        <div className="border-[1px] w-[360px] px-4 md:w-[350px] bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
+        <div className="border-[1px] w-[370px] px-4 md:w-[350px] bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
           <p>Average block time</p>
           <p className="font-semibold">{durationInSeconds} s</p>
         </div>
-        <div className="border-[1px] w-[360px] px-4 md:w-[350px] bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
+        <div className="border-[1px] w-[370px] px-4 md:w-[350px] bg-[#EDEDED] border-[#B6B6B6]  py-5  rounded-lg text-primary font-medium text-lg ">
           <p>Total transactions</p>
-          <p className="font-semibold">{transactions?.next_page_params?.block_number}</p>
+          <p className="font-semibold">34534</p>
         </div>
       </div>
-
-
 
     </div>
   );
